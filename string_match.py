@@ -4,6 +4,8 @@ import os
 import sys
 import argparse
 from argparse import RawTextHelpFormatter
+from string import ascii_lowercase
+from string import ascii_uppercase
 
 class Agent:
 	
@@ -15,11 +17,29 @@ class Agent:
 	def __str__(self):
 		return 'String: '+str(self.string)+' Fitness: '+str(self.fitness) 
 
+def brute_force():
+	
+	search_str = ''
+	
+	for c in in_str:
+		letter = ''
+		for d in ascii_lowercase:
+			if c == d:
+				search_str += d
+				break
+		for D in ascii_uppercase:
+			if c == D:
+				search_str += D
+				break
+	if search_str == in_str:
+		print 'FOUND'
+		print 'search_str is ',search_str,' in_str is ',in_str
+		sys.exit(0)
+	else:
+		print 'search_str is ',search_str,' in_str is ',in_str
+		print 'ERROR NOT FOUND'
+		sys.exit(1)
 
-in_str = None
-in_str_len = None
-population = 20
-generations = 10000
 
 def ga():
 
@@ -66,7 +86,7 @@ def fitness(agents):
 def selection(agents):
 
 	agents = sorted(agents, key=lambda agent: agent.fitness, reverse=True)
-	print '\n'.join(map(str,agents))
+#	print '\n'.join(map(str,agents))
 	agents = agents[:int(0.2*len(agents))]
 
 	return agents
@@ -110,14 +130,30 @@ def parse_arguments():
 	parser.add_argument('-in', '-i', action='store', type=str,
 				    dest='in_str', metavar='<input string>',
 				    required=True, help='String that the genetic algorithm will try to match')
-
+	parser.add_argument('--search', '-a', action='store',
+                            dest='algorithm', metavar='<search algorithm>',
+                            required=True, help='enter "genetic" or "g" to use a genetic algorithm or "brute" or "b" to brute force string matching')
 	return parser.parse_args()
+
+in_str = None
+in_str_len = None
+population = 20
+generations = 10000
+
 if __name__== '__main__':
 
-	#argv = parse_arguments()
-	#print argv
-	#sys.exit(1)
-	in_str = 'HelloWorld'
-	#in_str = 'Th3gr8Lambino'
+	argv = parse_arguments()
+	if not argv.in_str.isalpha():
+		print 'Error!\nonly apha letter charachters allowed\nExititng'
+		sys.exit(1)
+
+	in_str = argv.in_str
 	in_str_len = len(in_str)
-	ga()
+	if argv.algorithm == 'genetic' or argv.algorithm == 'g':
+		ga()
+	elif argv.algorithm == 'brute' or argv.algorithm == 'b':
+		brute_force()
+		#print 'to be implemented'
+		#sys.exit(1)
+	else:
+		sys.exit(1)
