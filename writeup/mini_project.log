@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730) (preloaded format=pdflatex 2018.3.28)  14 SEP 2018 15:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800) (preloaded format=pdflatex 2018.3.28)  15 SEP 2018 13:21
 entering extended mode
 **./mini_project.tex
 (mini_project.tex
@@ -590,25 +590,33 @@ LaTeX Info: Redefining \] on input line 2818.
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
+(/home/lambert/.miktex/texmfs/install/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count137
+\float@exts=\toks44
+\float@box=\box44
+\@float@everytoks=\toks45
+\@floatcapt=\box45
+)
 (/home/lambert/.miktex/texmfs/install/tex/latex/listings/listings.sty
-\lst@mode=\count137
-\lst@gtempboxa=\box44
-\lst@token=\toks44
-\lst@length=\count138
+\lst@mode=\count138
+\lst@gtempboxa=\box46
+\lst@token=\toks46
+\lst@length=\count139
 \lst@currlwidth=\dimen197
-\lst@column=\count139
-\lst@pos=\count140
+\lst@column=\count140
+\lst@pos=\count141
 \lst@lostspace=\dimen198
 \lst@width=\dimen199
-\lst@newlines=\count141
-\lst@lineno=\count142
+\lst@newlines=\count142
+\lst@lineno=\count143
 \lst@maxwidth=\dimen256
 
 (/home/lambert/.miktex/texmfs/install/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2018/09/02 1.7 (Carsten Heinz)
-\c@lstnumber=\count143
-\lst@skipnumbers=\count144
-\lst@framebox=\box45
+\c@lstnumber=\count144
+\lst@skipnumbers=\count145
+\lst@framebox=\box47
 )
 (/home/lambert/.miktex/texmfs/install/tex/latex/listings/listings.cfg
 File: listings.cfg 2018/09/02 1.7 listings configuration
@@ -618,56 +626,70 @@ Package: listings 2018/09/02 1.7 (Carsten Heinz)
 (/home/lambert/.miktex/texmfs/install/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2018/09/02 1.7 listings language file
 )
-(/home/lambert/.miktex/texmfs/install/tex/latex/base/fontenc.sty
-Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
+(/home/lambert/.miktex/texmfs/install/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
 
-(/home/lambert/.miktex/texmfs/install/tex/latex/base/t1enc.def
-File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
-LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
-))
-(/home/lambert/.miktex/texmfs/install/tex/latex/titling/titling.sty
-Package: titling 2009/09/04 v2.1d maketitle typesetting
-\thanksmarkwidth=\skip60
-\thanksmargin=\skip61
-\droptitle=\skip62
+(/home/lambert/.miktex/texmfs/install/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
 )
+(/home/lambert/.miktex/texmfs/install/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/home/lambert/.miktex/texmfs/install/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count146
+\Gm@cntv=\count147
+\c@Gm@tempcnt=\count148
+\Gm@bindingoffset=\dimen257
+\Gm@wd@mp=\dimen258
+\Gm@odd@mp=\dimen259
+\Gm@even@mp=\dimen260
+\Gm@layoutwidth=\dimen261
+\Gm@layoutheight=\dimen262
+\Gm@layouthoffset=\dimen263
+\Gm@layoutvoffset=\dimen264
+\Gm@dimlist=\toks47
+
+(/home/lambert/.miktex/texmfs/install/tex/latex/geometry/geometry.cfg))
 (mini_project.aux)
 \openout1 = `mini_project.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 104.
-LaTeX Font Info:    Try loading font information for LGR+cmr on input line 104.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 116.
+LaTeX Font Info:    Try loading font information for LGR+cmr on input line 116.
 
 
 (/home/lambert/.miktex/texmfs/install/tex/latex/cbfonts-fd/lgrcmr.fd
 File: lgrcmr.fd 2017/07/29 v1.2 Greek European Computer Regular
 )
-LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    ... okay on input line 116.
 
 (/home/lambert/.miktex/texmfs/install/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count145
-\scratchdimen=\dimen257
-\scratchbox=\box46
-\nofMPsegments=\count146
-\nofMParguments=\count147
-\everyMPshowfont=\toks45
-\MPscratchCnt=\count148
-\MPscratchDim=\dimen258
-\MPnumerator=\count149
-\makeMPintoPDFobject=\count150
-\everyMPtoPDFconversion=\toks46
+\scratchcounter=\count149
+\scratchdimen=\dimen265
+\scratchbox=\box48
+\nofMPsegments=\count150
+\nofMParguments=\count151
+\everyMPshowfont=\toks48
+\MPscratchCnt=\count152
+\MPscratchDim=\dimen266
+\MPnumerator=\count153
+\makeMPintoPDFobject=\count154
+\everyMPtoPDFconversion=\toks49
 ) (/home/lambert/.miktex/texmfs/install/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -704,10 +726,6 @@ Package etexcmds Info: Could not find \expanded.
 (/home/lambert/.miktex/texmfs/install/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2018/01/21 v0.26 Utility functions of pdfTeX for LuaTeX (HO
 )
-
-(/home/lambert/.miktex/texmfs/install/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
-)
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
@@ -722,46 +740,78 @@ G,.JBIG2,.JB2,.eps]
 )
 ABD: EveryShipout initializing macros
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count151
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 113.
+\c@lstlisting=\count155
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
+* v-part:(T,H,B)=(71.13188pt, 688.5567pt, 85.35826pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=455.24411pt
+* \textheight=688.5567pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-45.28133pt
+* \headheight=10.0pt
+* \headsep=34.14322pt
+* \topskip=12.0pt
+* \footskip=42.67912pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-(/home/lambert/.miktex/texmfs/install/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-) [1
-
-{/home/lambert/.miktex/texmfs/data/pdftex/config/pdftex.map}]
-<figures/Figure_3.png, id=14, 462.528pt x 346.896pt>
-File: figures/Figure_3.png Graphic file (type png)
-<use figures/Figure_3.png>
-Package pdftex.def Info: figures/Figure_3.png  used on input line 179.
-(pdftex.def)             Requested size: 390.0pt x 292.5128pt.
- [2] [3 <./figures/Figure_3.png>]
-Overfull \hbox (20.4262pt too wide) in paragraph at lines 198--199
-[][][][][][][][][]  
+Overfull \hbox (7.30942pt too wide) in paragraph at lines 144--150
+\OT1/cmr/m/n/12 To perform crossover we we randomly select two parent strings f
+rom the previous generation,
  []
 
-[4] (mini_project.aux) ) 
+[1
+
+{/home/lambert/.miktex/texmfs/data/pdftex/config/pdftex.map}] [2]
+<figures/Figure_3.png, id=17, 462.528pt x 346.896pt>
+File: figures/Figure_3.png Graphic file (type png)
+<use figures/Figure_3.png>
+Package pdftex.def Info: figures/Figure_3.png  used on input line 215.
+(pdftex.def)             Requested size: 455.24411pt x 341.44843pt.
+ [3 <./figures/Figure_3.png>] [4] (mini_project.aux) ) 
 Here is how much of TeX's memory you used:
- 17638 strings out of 495223
- 331080 string characters out of 3181567
- 561153 words of memory out of 3000000
- 20600 multiletter control sequences out of 15000+200000
- 11491 words of font info for 26 fonts, out of 3000000 for 9000
+ 17926 strings out of 495223
+ 336414 string characters out of 3181567
+ 564575 words of memory out of 3000000
+ 20869 multiletter control sequences out of 15000+200000
+ 15799 words of font info for 56 fonts, out of 3000000 for 9000
  0 hyphenation exceptions out of 8191
- 62i,6n,94p,470b,1583s stack positions out of 5000i,500n,10000p,200000b,50000s
- </home/lambert/.miktex/texmfs/data/fonts/pk/ljfour/jkn
-appen/ec/dpi600/ecbx1440.pk> </home/lambert/.miktex/texmfs/data/fonts/pk/ljfour
-/jknappen/ec/dpi600/ectt1095.pk> </home/lambert/.miktex/texmfs/data/fonts/pk/lj
-four/jknappen/ec/dpi600/ecrm0600.pk> </home/lambert/.miktex/texmfs/data/fonts/p
-k/ljfour/jknappen/ec/dpi600/ecbx1728.pk> </home/lambert/.miktex/texmfs/data/fon
-ts/pk/ljfour/jknappen/ec/dpi600/ecrm1200.pk> </home/lambert/.miktex/texmfs/data
-/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1200.pk>
-Output written on mini_project.pdf (4 pages, 108816 bytes).
+ 62i,7n,94p,470b,1589s stack positions out of 5000i,500n,10000p,200000b,50000s
+</home/lambert/.miktex/te
+xmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb></home/lambert/.miktex/t
+exmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb></home/lambert/.miktex/t
+exmfs/install/fonts/type1/public/amsfonts/cm/cmr17.pfb></home/lambert/.miktex/t
+exmfs/install/fonts/type1/public/amsfonts/cm/cmr6.pfb></home/lambert/.miktex/te
+xmfs/install/fonts/type1/public/amsfonts/cm/cmtt10.pfb></home/lambert/.miktex/t
+exmfs/install/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on mini_project.pdf (4 pages, 127947 bytes).
 PDF statistics:
- 191 PDF objects out of 1000 (max. 8388607)
+ 45 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 

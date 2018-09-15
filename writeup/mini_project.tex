@@ -73,9 +73,8 @@
 \usepackage{graphicx}
 %% Package to linebreak URLs in a sane manner.
 \usepackage{url}
-
+\usepackage{float}
 \usepackage{paralist}
-
 \usepackage{listings}
 \lstset{frame=tb,
   language=Python,
@@ -93,9 +92,22 @@
   breakatwhitespace=true,
   tabsize=3
 }
-\usepackage[T1]{fontenc}
-\usepackage{titling}
-\setlength{\droptitle}{-1em}
+\usepackage{geometry} % Required for adjusting page dimensions and margins
+
+\geometry{
+        paper=a4paper, % Paper size, change to letterpaper for US letter size
+        top=2.5cm, % Top margin
+        bottom=3cm, % Bottom margin
+        left=2.5cm, % Left margin
+        right=2.5cm, % Right margin
+        headheight=10pt, % Header height
+        footskip=1.5cm, % Space from the bottom margin to the baseline of the footer
+        headsep=1.2cm, % Space from the top margin to the baseline of the header
+        %showframe, % Uncomment to show how the type block is set on the page
+}
+
+
+
 \title{ICS674 Mini Project}
 
 \author{Lambert Leong}
@@ -103,22 +115,40 @@
 
 \begin{document}
 
-\textbf{ICS674 Mini Project}
-\\    Lambert Leong
+%\textbf{ICS674 Mini Project}
+%\\    Lambert Leong
 
-%\maketitle
+\maketitle
+
+For my evolutionary computation mini project I implemented a genetic algorithm
+that matches an input string.  Code implementations are written in Python2.7.
 
 \section{Search Space}
 
-\begin{lstlisting}[caption = {Search space is all letter characters, upper and lower case }]
+The search space consists of all alphabet characters, upper and lower case.
+This can be seen in Listing~\ref{lst:search_space} where we randomly fill the
+search strings with letters by calling \texttt{string.letters} from Pythons
+string module.
+
+\begin{lstlisting}[caption = {Search space is all letter characters, upper and
+lower case }, label = {lst:search_space}]
 self.string = ''.join(random.choice(string.letters) for _ in xrange(length))
 \end{lstlisting}
 
 \section{Variation Operator}
 
-\subsection{CrossOver}
+Two variation operator are implemented which include crossover and mutation.
 
-\begin{lstlisting}[caption = { }]
+\subsection{Crossover}
+
+To perform crossover we we randomly select two parent strings from the previous
+generation, seen in lines 4\&5 of Listing~\ref{lst:cross}.  I randomly select an
+integer which corrisponds to the array index at which the parent string is split
+for each child to inherit, seen i line 8.  Child 1 gets the char from the first
+half from parent 1 and the second half from parent 2.  Child 2 getst the first
+half from parent 2 and second half from parent 1.
+
+\begin{lstlisting}[caption = {Crossover Function}, label = {lst:cross}]
 def crossover(individuals):
         offspring = []
         for _ in xrange((population - len(individuals))/2):
@@ -137,7 +167,12 @@ def crossover(individuals):
 
 \subsection{Mutation}
 
-\begin{lstlisting}[caption = {}]
+Mutation occurs in the for of switching out a character in a search string with
+a random letter.  All strings in the population are suseptible to mutation and
+multiple mutation can occur in a individual string.  The mutation rate is 5\% as
+indicated in line 4 of Listing~\ref{lst:mutation}.
+
+\begin{lstlisting}[caption = {Mutation Function}, label={lst:mutation}]
 def mutation(individuals):
         for individual in individuals:
                 for i, param in enumerate(individual.string):
@@ -172,15 +207,18 @@ def selection(individuals):
                         found = True
                         break
 \end{lstlisting}
+
 \section{Objective Fuction}
 
-\begin{figure}[h!]
+\begin{figure}[H]
         \centering
         \includegraphics[width=\textwidth]{figures/Figure_3.png}
         \caption{Max, average, and min fitness values of each indvidual string
 for each generation}
         \label{fig:fitness}
 \end{figure}
+
+\begin{minipage}{\textwidth}
 
 \begin{lstlisting}[caption = {Fitness Function}]
 def fitness(individuals):
@@ -200,4 +238,5 @@ def fitness(individuals):
                 individual.fitness = int((float(score)/float(total))*100)                          
         return individuals
 \end{lstlisting}
+\end{minipage}
 \end{document}
