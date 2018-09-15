@@ -106,8 +106,16 @@
         %showframe, % Uncomment to show how the type block is set on the page
 }
 
-
-
+\usepackage{lmodern}%get scalable font
+%\usepackage{showframe}
+\usepackage{titling}
+\pretitle{\begin{center}\fontsize{18bp}{14bp}\selectfont}
+\posttitle{\par\end{center}}
+\preauthor{\begin{center}\fontsize{14bp}{14bp}\selectfont}
+\postauthor{\par\end{center}\vspace{14bp}}
+\predate{}
+\date{}
+\postdate{}
 \title{ICS674 Mini Project}
 
 \author{Lambert Leong}
@@ -143,9 +151,9 @@ Two variation operator are implemented which include crossover and mutation.
 
 To perform crossover we we randomly select two parent strings from the previous
 generation, seen in lines 4\&5 of Listing~\ref{lst:cross}.  I randomly select an
-integer which corrisponds to the array index at which the parent string is split
+integer which corresponds to the array index at which the parent string is split
 for each child to inherit, seen i line 8.  Child 1 gets the char from the first
-half from parent 1 and the second half from parent 2.  Child 2 getst the first
+half from parent 1 and the second half from parent 2.  Child 2 gets the first
 half from parent 2 and second half from parent 1.
 
 \begin{lstlisting}[caption = {Crossover Function}, label = {lst:cross}]
@@ -168,7 +176,7 @@ def crossover(individuals):
 \subsection{Mutation}
 
 Mutation occurs in the for of switching out a character in a search string with
-a random letter.  All strings in the population are suseptible to mutation and
+a random letter.  All strings in the population are susceptible to mutation and
 multiple mutation can occur in a individual string.  The mutation rate is 5\% as
 indicated in line 4 of Listing~\ref{lst:mutation}.
 
@@ -184,7 +192,12 @@ def mutation(individuals):
 
 \section{Selection Operator}
 
-\begin{lstlisting}[caption = {}]
+Individual strings are sorted based upon their fitness scores, as seen in
+Listing~\ref{lst:selection}.  Only the top 20\% of the individual strings are
+kept for each generation, which can be seen in line 6.  Lines 3-5 are for
+graphing purposes and not part of the selection function.
+
+\begin{lstlisting}[caption = {Selection Function}, label = {lst:selection}]
 def selection(individuals):
         individuals = sorted(individuals, key=lambda individual: individual.fitness, reverse=True)
         max_fit.append(max(individuals, key=lambda individual: individual.fitness).fitness)
@@ -196,7 +209,12 @@ def selection(individuals):
 
 \section{Termination Criterion}
 
-\begin{lstlisting}[caption={}]
+Listing~\ref{lst:term} displays the termination code.  The algorithm terminates
+when it has reached the last generation, seen i line 1, or when the fitness is
+100, seen in line 7.  Fitness scores are out of a 100 and a score of 100 equates
+to an identical and successful string match.
+
+\begin{lstlisting}[caption={Termination}, label={lst:term}]
  for generation in xrange(generations):
                 generation_list.append(generation)
                 individuals = fitness(individuals)
@@ -210,17 +228,39 @@ def selection(individuals):
 
 \section{Objective Fuction}
 
+Figure~\ref{fig:fitness} indicates the max, min, and average fitness scores in
+each generation.  During this run, the string was matched in a little over 350
+generation.  The blue line reaches a fitness score of 100 which is the max
+fitness score and indicates a successful match of the input string which was
+``HelloWorld".  Fitness scores were calculated with the objective function shown
+in Listing~\ref{lst:fit}
+
 \begin{figure}[H]
         \centering
-        \includegraphics[width=\textwidth]{figures/Figure_3.png}
-        \caption{Max, average, and min fitness values of each indvidual string
+        \includegraphics[width=.8\textwidth]{figures/Figure_3.png}
+        \caption{Max, average, and min fitness values of each individual string
 for each generation}
         \label{fig:fitness}
 \end{figure}
 
+As mentioned above, fitness scores are out of 100 and they are calculated as
+percentages.  The \texttt{total} is given the value of twice the length of the
+string, seen in line 3.  If the search/individual string contains a letter that
+is also contained in the input string, the fitness \texttt{score} is incremented
+by 1.  This process occurs in lines 9-14.  Once a letter from the search string
+is found to be in the input string, that letter is removed from the input string
+for future searches as to avoid duplicates and unwanted fitness score
+increases.  
+\\ \\
+Scores are also incremented if the
+search string contains the right letter in the right location or at the same
+index as the input string, which can be seen in lines 5-7. The score is then
+divided by the total and multiplied by 100 to get the resulting fitness score,
+shown in line 15.
+
 \begin{minipage}{\textwidth}
 
-\begin{lstlisting}[caption = {Fitness Function}]
+\begin{lstlisting}[caption = {Fitness Function}, label = {lst:fit}]
 def fitness(individuals):
         for individual in individuals:
                 total = len(in_str)*2
