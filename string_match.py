@@ -89,11 +89,11 @@ def fitness(individuals):
 def selection(individuals):
 
 	individuals = sorted(individuals, key=lambda individual: individual.fitness, reverse=True)
-	
+	### next three lines are for graph purposes only ###
 	max_fit.append(max(individuals, key=lambda individual: individual.fitness).fitness)
 	min_fit.append(min(individuals, key=lambda individual: individual.fitness).fitness)
 	avg_fit.append(float(sum(i.fitness for i in individuals)//len(individuals)))
-
+	
 	individuals = individuals[:int(0.2*len(individuals))]
 
 	return individuals
